@@ -1,6 +1,3 @@
-Here’s a cleaner and more **reader-friendly markdown version** of your content:
-
-
 # 🚀 Install AI SDK
 
 ```bash
@@ -196,3 +193,88 @@ streamText({
 | 💸 Budget dev/testing | Cheaper, smaller models    |
 
 ---
+
+
+Here’s a polished and more engaging version of your markdown notes 👇
+
+---
+
+# 🔹 What are Tokens in AI Context?
+
+* A **token** is the smallest unit of text a model processes.
+* Think of it as **chunks of text** (not fixed length).
+* Tokens can be:
+
+  * Whole words
+  * Parts of words
+  * Individual characters
+  * Punctuation marks
+
+⚡ The same word may be split differently by different models.
+
+---
+
+### 🧩 Example: Word Splitting
+
+* **"Hamburger"**
+
+  * Model A → `"ham"`, `"bur"`, `"ger"`
+  * Model B → `"ham"`, `"burger"`
+
+* **"I love to eat pizza!"**
+
+  * Model A (6 tokens) → `"I"`, `"love"`, `"to"`, `"eat"`, `"pizza"`, `"!"`
+
+🔗 Try it yourself → [OpenAI Tokenizer](https://platform.openai.com/tokenizer)
+
+---
+
+# 🎯 Why Tokens Matter?
+
+Tokens directly impact your app in **3 key ways**:
+
+1️⃣ **How much text you can process at once**
+→ Every model has a max token capacity.
+
+2️⃣ **API cost**
+→ More tokens = higher cost.
+
+3️⃣ **Quality of results**
+→ If the context is too long, old info gets dropped.
+
+---
+
+## 📝 Context Window (Short-Term Memory)
+
+* The **context window** = how many tokens the model can handle in one go.
+* Example:
+
+  * **GPT-4.1-nano** → up to **1M tokens** per conversation.
+  * That’s \~2,500–3,000 pages → almost the **entire Lord of the Rings Trilogy** in one shot!
+
+🖊️ Imagine the model’s memory like a **whiteboard**:
+
+* As you write new stuff, old notes get erased when space runs out.
+
+---
+
+# 🔄 Input vs Output Tokens
+
+* **Input Tokens** → everything you send (prompt + system messages + history).
+* **Output Tokens** → everything the model generates in response.
+
+💡 Why it matters:
+
+* Different models have **different input/output limits**.
+* **Pricing** is often **different** for input vs output tokens.
+* Optimizing this = saves \$\$ and improves performance.
+
+🔗 [Check OpenAI Pricing](https://platform.openai.com/docs/pricing)
+
+---
+
+📸 Token Example:
+
+![alt text](<Screenshot 2025-08-19 at 11.23.48 PM-1.png>)
+
+
