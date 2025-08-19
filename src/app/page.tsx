@@ -6,12 +6,12 @@ export default function Home() {
     routes: [
       {
         name: "Without Stream Response",
-        path: "/completion",
+        path: "/ui/completion",
         type: "static",
       },
       {
         name: "With Stream Response",
-        path: "/completion/stream",
+        path: "/ui/completion/stream",
         type: "streaming",
       },
     ],
