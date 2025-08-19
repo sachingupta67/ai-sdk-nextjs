@@ -14,6 +14,11 @@ export default function Home() {
         path: "/ui/completion/stream",
         type: "streaming",
       },
+      {
+        name: "Chat UI | So it can't forget previous chat info or context",
+        path: "/ui/chat",
+        type: "streaming",
+      },
     ],
   };
 
@@ -32,7 +37,6 @@ export default function Home() {
           >
             <div className="flex justify-between items-center">
               <span className="text-blue-600 font-medium">{route.name}</span>
-  
             </div>
           </Link>
         ))}

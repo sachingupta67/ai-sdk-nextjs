@@ -278,3 +278,34 @@ Tokens directly impact your app in **3 key ways**:
 ![alt text](<Screenshot 2025-08-19 at 11.23.48 PM-1.png>)
 
 
+Here’s a polished version of your markdown with improved clarity, structure, and readability:
+
+---
+
+# 💬 Chat with AI
+
+* Each **prompt** is treated as a completely independent request.
+* It’s similar to browsing the web in **Incognito Mode** → the AI starts fresh every time with **zero memory** of past messages.
+
+👉 To build a **proper conversation experience**, we need to:
+
+* Maintain an **ordered history** of all messages.
+* Include that history with **every new prompt**.
+
+✨ The **AI SDK** makes this otherwise complex process super simple.
+
+---
+
+## 🚀 How to Approach (Building a Chatbot)
+
+1. **Create a Route Handler**
+
+   * Handles communication with OpenAI while maintaining conversation history.
+   * **Code:** `src/app/api/chat`
+
+2. **Build a Chat UI**
+
+   * Displays the conversation in an interactive interface.
+   * **Code:** `src/app/ui/chat`
+
+--- 
