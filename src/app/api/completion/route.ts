@@ -5,7 +5,7 @@ export async function POST(req: Request) {
   try {
     const { prompt } = await req.json();
     const response = await generateText({
-      model: openai("gpt-4.1-nano123"),
+      model: openai("gpt-4.1-nano"),
       prompt,
     });
 
