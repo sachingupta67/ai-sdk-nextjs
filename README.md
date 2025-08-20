@@ -481,3 +481,37 @@ ui/
 
 ---
 
+# 🔍 Analyse Image with AI
+
+So far, we’ve been working exclusively with **text-based interactions**:
+- Generating responses  
+- Building chat conversations  
+- Creating structured data  
+
+---
+
+## 🚀 But Modern AI Models Can Do More  
+They are **multi-modal** — meaning they can understand and process **different types of content**:
+
+- 📝 Text  
+- 📄 PDFs  
+- 🖼️ Images  
+- …and much more  
+
+---
+
+## ⚡ Example: Multi-Modal Chat  
+
+👉 API Endpoint:  
+```bash
+api/multi-modal-chat
+````
+
+👉 UI Component:
+
+```bash
+ui/multi-modal-chat
+```
+
+
+

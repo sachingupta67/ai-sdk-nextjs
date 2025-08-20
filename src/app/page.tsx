@@ -34,6 +34,11 @@ export default function Home() {
         path: "/ui/structured-enum",
         type: "streaming",
       },
+      {
+        name: "MultiModal Modal | Analyze Image",
+        path: "/ui/multi-modal-chat",
+        type: "streaming",
+      },
     ],
   };
 

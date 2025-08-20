@@ -1,59 +1,30 @@
 "use client";
 
 import { useChat } from "@ai-sdk/react";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { DefaultChatTransport } from "ai";
+import Image from "next/image";
 
-/*
-How Message Look Like
-
-const message: UIMessage[];
-
-type UIMessage = {
-  id: string;
-  role: "user" | "assistant";
-  part: TextUIPart[];
-};
-
-type TextUIPart = {
-  type: "text";
-  text: string;
-};
-
-const messages = [
-  {
-    id: "msg-1",
-    role: "user",
-    parts: [
-      {
-        type: "text",
-        text: "What is react",
-      },
-    ],
-  },
-  {
-    id: "msg-2",
-    role: "assistant",
-    parts: [
-      {
-        type: "text",
-        text: "Its a react library...",
-      },
-    ],
-  },
-];
-
-*/
-
-export default function ChatPage() {
+export default function MultiModalChatPage() {
   const [input, setInput] = useState("");
-  const { messages, sendMessage, status, error, stop } = useChat(); // Note : by default it used /api/chat
+  const [files, setFiles] = useState<FileList | undefined>(undefined);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const { messages, sendMessage, status, error, stop } = useChat({
+    transport: new DefaultChatTransport({
+      api: "/api/multi-modal-chat",
+    }),
+  });
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    sendMessage({ text: input });
+    sendMessage({ text: input, files });
     setInput("");
+    setFiles(undefined);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
   };
-
 
   return (
     <div className="flex flex-col w-full max-w-md mx-auto bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden h-[500px]">
@@ -73,6 +44,19 @@ export default function ChatPage() {
                 case "text":
                   return <div key={`${m.id}-${index}`}>{item.text}</div>;
 
+                case "file":
+                  if (item.mediaType?.startsWith("image/")) {
+                    return (
+                      <Image
+                        key={`${m.id}-${index}`}
+                        src={item.url}
+                        alt={item.filename ?? `attachment-${index}`}
+                        width={500}
+                        height={500}
+                      />
+                    );
+                  }
+                  return null;
                 default:
                   return null;
               }
@@ -96,6 +80,27 @@ export default function ChatPage() {
         onSubmit={submitHandler}
         className="flex items-center gap-2 border-t border-gray-200 bg-gray-50 p-2"
       >
+        {/* File Upload */}
+        <div className="relative">
+          <label
+            htmlFor="file-upload"
+            className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 bg-gray-100 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-200 transition"
+          >
+            📎 {files?.length ? `${files.length} file(s)` : "Attach"}
+          </label>
+          <input
+            id="file-upload"
+            type="file"
+            className="hidden"
+            onChange={(e) => {
+              if (e.target.files) {
+                setFiles(e.target.files);
+              }
+            }}
+            multiple
+            ref={fileInputRef}
+          />
+        </div>
         <input
           type="text"
           placeholder="Type your message..."
