@@ -35,7 +35,7 @@ export default function Home() {
         type: "streaming",
       },
       {
-        name: "MultiModal Modal | Analyze Image",
+        name: "MultiModal Modal | Analyze Image & PDF as attachment",
         path: "/ui/multi-modal-chat",
         type: "streaming",
       },
