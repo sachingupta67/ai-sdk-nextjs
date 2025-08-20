@@ -56,6 +56,16 @@ export default function MultiModalChatPage() {
                       />
                     );
                   }
+                  if (item.mediaType?.startsWith("application/pdf")) {
+                    return (
+                      <iframe
+                        key={`${m.id}-${index}`}
+                        src={item.url}
+                        className="w-full h-full"
+                        title={item.filename ?? `attachment-${index}`}
+                      />
+                    );
+                  }
                   return null;
                 default:
                   return null;
