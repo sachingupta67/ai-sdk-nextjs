@@ -19,6 +19,11 @@ export default function Home() {
         path: "/ui/chat",
         type: "streaming",
       },
+       {
+        name: "Structured Data | Ex: A Recipe Maker with Custom Schema - Stream Object",
+        path: "/ui/structured-data",
+        type: "streaming",
+      },
     ],
   };
 
