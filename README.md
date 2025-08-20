@@ -394,3 +394,90 @@ Structured data generation supports:
 
 
 
+# 🎮 Pokémon & 📝 Sentiment AI Examples
+
+This project demonstrates two AI-powered features using **structured arrays** and **enums**:
+
+---
+
+## 1️⃣ Pokémon Generator (Array)
+
+Generate a list of Pokémon based on a **given type**.
+
+- **API Endpoint:** `api/structured-array`  
+- **UI Component:** `ui/structured-array`  
+
+**How it works:**  
+1. Enter a Pokémon type (e.g., `Fire`, `Water`, `Grass`).  
+2. The AI generates a structured array of Pokémon matching that type.  
+3. Each Pokémon includes its **name** and **abilities**.
+
+**Example Output:**
+```json
+[
+  {
+    "name": "Charmander",
+    "abilities": ["Blaze", "Solar Power"]
+  },
+  {
+    "name": "Vulpix",
+    "abilities": ["Flash Fire", "Drought"]
+  }
+]
+````
+
+---
+
+## 2️⃣ Sentiment Classifier (Enum)
+
+Classify text as **Positive**, **Negative**, or **Neutral**.
+
+* **API Endpoint:** `api/structured-enum`
+* **UI Component:** `ui/structured-enum`
+
+**How it works:**
+
+1. Enter any text in the input field.
+2. The AI analyzes the sentiment.
+3. Displayed with **emoji + text** for instant visual feedback:
+
+| Sentiment | Emoji | Description                       |
+| --------- | ----- | --------------------------------- |
+| Positive  | 😊    | Text expresses a positive emotion |
+| Negative  | 😞    | Text expresses a negative emotion |
+| Neutral   | 😐    | Text is neutral or factual        |
+
+**Example Output:**
+
+```json
+{
+  "sentiment": "positive"
+}
+```
+
+---
+
+## 📁 Project Structure
+
+```
+api/
+ ├─ structured-array      # Pokémon generator API
+ └─ structured-enum       # Sentiment classifier API
+ui/
+ ├─ structured-array      # UI for Pokémon generator
+ └─ structured-enum       # UI for sentiment classifier
+```
+
+---
+
+## 🚀 Usage
+
+* Use `structured-array` to generate **Pokémon lists** by type.
+* Use `structured-enum` to classify **sentiment** of any text.
+
+**Tip:** Both APIs return **structured, predictable data** suitable for building interactive UIs or dashboards.
+
+ 
+
+---
+

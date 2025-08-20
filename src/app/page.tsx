@@ -24,6 +24,16 @@ export default function Home() {
         path: "/ui/structured-data",
         type: "streaming",
       },
+      {
+        name: "Structured Data as Array | Ex: Pokemon list generator",
+        path: "/ui/structured-array",
+        type: "streaming",
+      },
+      {
+        name: "Structured Data as Enum | Ex: get sentiment - positive , negative, neutral",
+        path: "/ui/structured-enum",
+        type: "streaming",
+      },
     ],
   };
 
