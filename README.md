@@ -514,4 +514,21 @@ ui/multi-modal-chat
 ```
 
 
+# 🖼️ Generate Images with AI
+
+- We’ve seen how AI can **analyze images and PDFs**  
+- AI can also **create images from scratch** based on text descriptions  
+
+✨ Example:  
+There are many AI models available for image generation.  
+For now, we’ll use **DALL·E 3** from **OpenAI**:  
+- ✅ Not the best, but the **cheapest option**  
+- 🔄 You can always **upgrade to more advanced models** depending on needs and budget  
+
+---
+
+## ⚙️ Source Code Structure
+
+- **API** → `api/generate-image`  
+- **UI** → `ui/generate-image`  
 

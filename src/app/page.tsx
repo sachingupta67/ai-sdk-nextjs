@@ -39,6 +39,11 @@ export default function Home() {
         path: "/ui/multi-modal-chat",
         type: "streaming",
       },
+      {
+        name: "Generate Image | Dalle-3 - OPENAI",
+        path: "/ui/generate-image",
+        type: "streaming",
+      },
     ],
   };
 
