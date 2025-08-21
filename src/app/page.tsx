@@ -49,6 +49,11 @@ export default function Home() {
         path: "/ui/transcribe-audio",
         type: "streaming",
       },
+      {
+        name: "Text to Speech | tts-1 - OPENAI",
+        path: "/ui/generate-speech",
+        type: "streaming",
+      },
     ],
   };
 

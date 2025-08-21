@@ -553,3 +553,26 @@ We’ll build an **audio transcription feature** that can take any audio file an
 ---
 
 ✨ This setup enables seamless **speech-to-text** integration in any application.  
+
+
+# 🗣️ Text to Speech
+
+Easily **convert text into natural-sounding speech** with OpenAI’s text-to-speech model.  
+This feature lets you generate lifelike audio from any text input.
+
+---
+
+## ✨ Features
+- ✅ Convert text to speech instantly  
+- ✅ Natural, human-like voices  
+- ✅ Simple API + UI integration  
+
+---
+
+## 🔧 Implementation
+- **API Endpoint:** `api/generate-speech`  
+- **UI Component:** `ui/generate-speech`  
+
+---
+
+🚀 With this setup, you can add high-quality voice output to your app in just a few lines of code.
