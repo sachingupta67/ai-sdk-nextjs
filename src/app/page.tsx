@@ -44,6 +44,11 @@ export default function Home() {
         path: "/ui/generate-image",
         type: "streaming",
       },
+       {
+        name: "Transcribe Audio | Whisper-1 - OPENAI",
+        path: "/ui/transcribe-audio",
+        type: "streaming",
+      },
     ],
   };
 

@@ -532,3 +532,24 @@ For now, we’ll use **DALL·E 3** from **OpenAI**:
 - **API** → `api/generate-image`  
 - **UI** → `ui/generate-image`  
 
+
+# 🎙️ Audio Transcription with AI
+
+AI can **transcribe audio with incredible accuracy** —  
+it handles:
+- ✅ Different accents  
+- ✅ Background noise  
+- ✅ Multiple languages  
+
+We’ll build an **audio transcription feature** that can take any audio file and instantly convert it to text.  
+
+---
+
+## 🔧 Tech Stack
+- **Model:** [`whisper-1`](https://platform.openai.com/docs/guides/speech-to-text) (from OpenAI)  
+- **API Endpoint:** `api/transcribe-audio`  
+- **UI Component:** `ui/transcribe-audio`  
+
+---
+
+✨ This setup enables seamless **speech-to-text** integration in any application.  
