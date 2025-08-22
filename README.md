@@ -1,3 +1,9 @@
+# How to run project
+- npm install
+- change .env.local.sample file name to '.env.local'
+- update .env variables in this file
+- then 'npm run dev'
+
 # 🚀 Install AI SDK
 
 ```bash
